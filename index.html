@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   
+    <title>Restaurant Navbar</title>
+    <style>
+         .foodhub{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size:xx-large;
+           text-shadow:2px 2px 1px bisque ;
+         }
+         .foodhub::first-letter{
+            font-size: 40px;
+
+         }
+         .nav-link{
+            font-size:large;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-style: italic;
+            color: ghostwhite;
+         }
+         .menulist-bgcolor{
+            background-color:#FFFFFF;
+            border: green 1px;
+            transform: scaleY(0.9);
+           
+         }
+         .dropdown-item{
+            color: black;
+            border: solid white 2px;
+            border-radius: 5px;
+            box-shadow: 2px 2px green;
+         }
+
+
+         .bg-image {
+            background-image: url('bg-1.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 85vh; /* Adjust this value as needed */
+            background-repeat: no-repeat;
+         } 
+          
+         .welcome{
+            height:500px ;
+            padding-left: 10px;
+            padding-top: 200px;
+         }
+         .welcome-2::first-letter{
+            
+            font-size: 70px;
+            font-weight: bold;
+            
+            text-shadow: 5px 5px 10px red;
+
+
+         }
+         .lead{
+            font-size:x-large;
+         }
+         
+         .lead::first-letter{
+            text-decoration: line-through;
+         }
+
+         
+
+.card-container {
+  display: flex;
+ 
+  
+  justify-content: space-around;
+}
+
+.card {
+ background-color: #f5f5f5;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Regular card layout for larger screens */
+.card {
+  flex: 0 0 280px; /* Fixed width for larger screens */
+  /* Other styles */
+}
+
+/* Media query for screens up to 768px (small screens) */
+@media (max-width: 768px) {
+  .card-container {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start; /* Align cards to the start */
+   
+  }
+  
+  .card {
+    flex: 0 0 auto; /* Allow cards to wrap and adjust to content */
+    width: 100%; /* Occupy full width of container */
+    /* Other styles */
+  }
+
+ 
+  }
+
+
+/* Styles for screens with a width of 280px or less */
+           @media (max-width:412px) {
+
+            .lead{
+                font-size:medium;
+                 
+            }
+            .welcome{
+               padding-top:50px ;
+            }
+             }
+
+
+    /* Media query for screens up to 820px (small screens) */
+@media (max-width: 912px) {
+  .card-container {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: space-around; /* Adjust this value as needed */
+    justify-content: flex-start;
+  }
+
+  .card {
+    flex: 0 0 auto; /* Allow cards to wrap and adjust to content */
+    width: 100%; /* Occupy full width of container */
+    /* Other styles */
+  }
+}
+
+
+             
+
+             
+    </style>
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand    foodhub" href="#">Food hub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
+                        <ul class="dropdown-menu menulist-bgcolor" aria-labelledby="menuDropdown">
+                            <li><a class="dropdown-item" href="#">Appetizers</a></li>
+                            <li><a class="dropdown-item" href="#">Main Courses</a></li>
+                            <li><a class="dropdown-item" href="#">Desserts</a></li>
+                            <li><a class="dropdown-item" href="#">Beverages</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reservation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gallery</a>
+                    </li>
+                </ul>
+               
+            </div>
+        </div>
+    </nav>
+    <div class="bg-image">
+        <div class="container-fluid   welcome">
+           
+            <h1 class="display-4 text-white  welcome-2">Welcome to Our Restaurant</h1><br>
+            <p class="lead text-white ms-5 fw-bold ">Experience the finest dining with our delicious dishes.</p>
+           <p class="lead text-white ms-5 fw-light ">-All Country dishes are available here.</p>
+        </div>
+    </div>
+
+         <h1 class="display-6 text-center m-1">OUR FAMOUS DISHES</h1>
+        <div class="card-container">
+          <div class="card">
+            <img src="thali.jpg" alt="dish-1">
+            <h5>Authentic Indian Vegetarian Thali Experience</h5>
+            <p>Immerse yourself in the diverse flavors of India with our Vegetarian Thali. A lavish spread of aromatic basmati rice, assorted vegetable curries, daal (lentil stew), naan or roti bread, raita (yogurt dip), and a selection of chutneys and pickles. Indulge in the rich culinary heritage of India, all in one delightful platter.</p>
+            <span class="price">$20</span>
+          </div>
+          <div class="card">
+            <img src="mushroom-risotto.jpg" alt="Restaurant 2">
+            <h5> Creamy Mushroom Risotto from Italy</h5>
+            <p> Indulge in the flavors of Italy with our creamy Mushroom Risotto. Made from Arborio rice cooked to perfection in a rich broth, it's combined with sautéed mushrooms, onions, garlic, white wine, and Parmesan cheese. A delectable dish that brings the taste of Europe to your plate.</p>
+            <span class="price">$15.99</span>
+          </div>
+          <div class="card">
+            <img src="veg-chilli.jpg" alt="Restaurant 3">
+            <h5>Hearty Vegetarian Chili from North America</h5>
+            <p>Experience the warmth of our Vegetarian Chili, a hearty blend of kidney beans, black beans, pinto beans, and a medley of vegetables simmered in a fragrant blend of spices. Topped with grated cheese, sour cream, and served with tortilla chips, it's a comforting taste of North America.
+            </p>
+            <span class="price">$12.49</span>
+          </div>
+          <div class="card">
+            <img src="Moroccon vegetable tangine.jpg" alt="Restaurant 4">
+            <h5>Savory Moroccan Vegetable Tagine from Africa</h5>
+            <p>Embark on a culinary journey with our Moroccan Vegetable Tagine. A slow-cooked medley of carrots, potatoes, bell peppers, and zucchini, infused with the aromatic spices of North Africa. Served with couscous or bread, it's a flavorful representation of African cuisine.</p>
+            <span class="price">$17.99</span>
+          </div>
+          <div class="card">
+            <img src="vegetable-pasties.jpg" alt="Restaurant 5">
+            <h5> Aussie Vegetable Pie: A Taste of Australia</h5>
+            <p> Delight in the comfort of our Australian Vegetable Pie, a flaky pastry filled with diced potatoes, carrots, peas, and onions. Seasoned with Australian herbs and spices, it's a handheld delight that embodies the flavors of Down Under.
+            </p>
+            <span class="price">$14.75</span>
+          </div>
+          
+        </div>
+
+        <!-------------------------------------------------------------menu----------------------------------------------------------------------->
+        <div class="container px-4">
+            <!-- Main Heading: Appetizers -->
+            <h1 class="text-center mb-4">Appetizers</h1>
+            <div class="row gx-5">
+              <!-- Appetizer 1 -->
+              <div class="col-12 col-md-3">
+                <div class="card">
+                  <img src="aptzr-1.jpg" class="card-img-top" alt="Appetizer 1">
+                  <div class="card-body text-center">
+                    <span class="price">$8.99</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Appetizer 2 -->
+              <div class="col-12 col-md-3">
+                <div class="card">
+                  <img src="aptzr-2.jpg" class="card-img-top" alt="Appetizer 2">
+                  <div class="card-body text-center">
+                    <span class="price">$7.49</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Appetizer 3 -->
+              <div class="col-12 col-md-3">
+                <div class="card">
+                  <img src="aptzr-3.jpg" class="card-img-top" alt="Appetizer 3">
+                  <div class="card-body text-center">
+                    <span class="price">$6.99</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Appetizer 4 -->
+              <div class="col-12 col-md-3">
+                <div class="card">
+                  <img src="aptzr-4.jpg" class="card-img-top" alt="Appetizer 4">
+                  <div class="card-body text-center">
+                    <span class="price">$9.25</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Main Heading: Main Courses -->
+            <h1 class="text-center my-4">Main Courses</h1>
+            <div class="row gx-5">
+              <!-- Main Course 1 -->
+              <div class="col-12 col-md-3">
+                <div class="card">
+                  <img src="mncrse-1" class="card-img-top" alt="Main Course 1">
+                  <div class="card-body text-center">
+                    <span class="price">$14.99</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Main Course 2 -->
+              <div class="col-12 col-md-3">
+                <div class="card">
+                  <img src="mncrse-2.jpg" class="card-img-top" alt="Main Course 2">
+                  <div class="card-body text-center">
+                    <span class="price">$12.49</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Main Course 3 -->
+              <div class="col-12 col-md-3">
+                <div class="card">
+                  <img src="mncrse-3.jpg" class="card-img-top" alt="Main Course 3">
+                  <div class="card-body text-center">
+                    <span class="price">$15.99</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Main Course 4 -->
+              <div class="col-12 col-md-3">
+                <div class="card">
+                  <img src="mncrse-4.jpg" class="card-img-top" alt="Main Course 4">
+                  <div class="card-body text-center">
+                    <span class="price">$16.75</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Main Heading: Desserts -->
+            <h1 class="text-center my-4">Desserts</h1>
+            <div class="row gx-5">
+              <!-- Dessert 1 -->
+              <div class="col-12 col-md-3">
+                <div class="card">
+                  <img src="dsrt-1.jpg" class="card-img-top" alt="Dessert 1">
+                  <div class="card-body text-center">
+                    <span class="price">$6.99</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Dessert 2 -->
+              <div class="col-12 col-md-3">
+                <div class="card">
+                  <img src="dsrt-2.jpg" class="card-img-top" alt="Dessert 2">
+                  <div class="card-body text-center">
+                    <span class="price">$8.49</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Dessert 3 -->
+              <div class="col-12 col-md-3">
+                <div class="card">
+                  <img src="dsrt-3.jpg" class="card-img-top" alt="Dessert 3">
+                  <div class="card-body text-center">
+                    <span class="price">$7.99</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Dessert 4 -->
+              <div class="col-12 col-md-3">
+                <div class="card">
+                  <img src="dsrt-4.jpg" class="card-img-top" alt="Dessert 4">
+                  <div class="card-body text-center">
+                    <span class="price">$9.25</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Main Heading: Beverages -->
+            <h1 class="text-center my-4">Beverages</h1>
+            <div class="row gx-5">
+              <!-- Beverage 1 -->
+              <div class="col-12 col-md-3">
+                <div class="card">
+                  <img src="bvrg-1.jpg" class="card-img-top" alt="Beverage 1">
+                  <div class="card-body text-center">
+                    <span class="price">$2.99</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Beverage 2 -->
+              <div class="col-12 col-md-3">
+                <div class="card">
+                  <img src="bvrg-2.jpg" class="card-img-top" alt="Beverage 2">
+                  <div class="card-body text-center">
+                    <span class="price">$3.49</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Beverage 3 -->
+              <div class="col-12 col-md-3">
+                <div class="card">
+                  <img src="bvrg-3.jpg" class="card-img-top" alt="Beverage 3">
+                  <div class="card-body text-center">
+                    <span class="price">$2.75</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Beverage 4 -->
+              <div class="col-12 col-md-3">
+                <div class="card">
+                  <img src="bvrg-4.jpg" class="card-img-top" alt="Beverage 4">
+                  <div class="card-body text-center">
+                    <span class="price">$3.99</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    <!------------------------------------------------------------------------------------------------------------------------>
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h4>Contact Us</h4>
+              <address>
+                123 Main Street<br>
+                City, Country<br>
+                Phone: +123-456-7890<br>
+                Email: info@foodhub.com
+              </address>
+            </div>
+            <div class="col-md-4">
+              <h4>Opening Hours</h4>
+              <ul>
+                <li>Monday - Friday: 11:00 AM - 10:00 PM</li>
+                <li>Saturday: 12:00 PM - 11:00 PM</li>
+                <li>Sunday: Closed</li>
+              </ul>
+            </div>
+            <!-- Follow Us -->
+            <div class="col-md-4">
+              <h4>Follow Us</h4>
+               <ul class="list-inline">
+                <li class="list-inline-item"><a href="" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+              <li class="list-inline-item"><a href="" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+             <li class="list-inline-item"><a href="t" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+             </ul>
+            </div>
+  
+          </div>
+          <hr>
+          <div class="text-center">
+            <p>&copy; 2023 Food Hub. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+      
+
+      <script>
+
+      </script>
+
+
+
+   
+</body>
+</html>
